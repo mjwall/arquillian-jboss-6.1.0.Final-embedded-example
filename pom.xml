@@ -49,6 +49,11 @@
             <version>${version.org.jboss.arquillian}</version>
         </dependency>
         <dependency>
+            <groupId>org.jboss.arquillian.testng</groupId>
+            <artifactId>arquillian-testng-container</artifactId>
+            <version>${version.org.jboss.arquillian}</version>
+        </dependency>
+        <dependency>
             <groupId>org.jboss.arquillian.junit</groupId>
             <artifactId>arquillian-junit-standalone</artifactId>
             <version>${version.org.jboss.arquillian}</version>
