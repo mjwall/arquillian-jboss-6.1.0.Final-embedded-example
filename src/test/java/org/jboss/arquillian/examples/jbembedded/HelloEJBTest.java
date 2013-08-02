@@ -15,7 +15,7 @@ import static org.junit.Assert.assertEquals;
  * @author <a href="mailto:michaelschuetz83@gmail.com">Michael Schuetz</a>
  */
 @RunWith(Arquillian.class)
-public class HelloEJBIT {
+public class HelloEJBTest {
     @EJB
     private HelloEJB helloEJB;
 
@@ -28,7 +28,7 @@ public class HelloEJBIT {
     @Test
     public void testHelloEJB() {
         String result = helloEJB.sayHelloEJB("Michael");
-        // assertEquals("Hello Michael", result);
-        assertEquals("Hello David", result);
+        assertEquals("Hello Michael", result);
+        //assertEquals("Hello David", result);
     }
 }
