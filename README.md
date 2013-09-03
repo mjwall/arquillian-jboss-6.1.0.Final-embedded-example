@@ -6,9 +6,9 @@ little while longer.  This project is an attempt to provide that simple working 
 ejb31-jbembedded example at https://github.com/arquillian/arquillian-examples/tree/master/ejb31-jbembedded.
 
 Arquillian enables you to test your business logic in a remote or embedded container. Alternatively, it can deploy an archive to the container so the test can interact as a remote client.
- 
+
 All about arquillian: http://jboss.org/arquillian
- 
+
 ## Getting started
 
 1. Clone this project at https://github.com/mjwall/arquillian-jboss-6.1.0.Final-embedded-example
@@ -41,6 +41,15 @@ Arquillian then starts JBoss and deploys an archive.  Failsafe will not stop the
 so all your tests will get a chance to run.  For more on failsafe,
 see http://maven.apache.org/surefire/maven-failsafe-plugin/index.html.  Note, the integration-phase also runs the test
 phase, so unit tests will be run first
+
+NOTE: the xmlsec jar appears to be corrupted in the nexus repo.  I got
+a "invalid CEN header (bad signature)" error, so I downloaded a binary from
+http://archive.apache.org/dist/santuario/java-library/xml-security-bin-1_4_3.zip,
+unzipped it and put the lib/xmlsec-1.4.3.jar into my maven repo at the
+correct location.
+
+NOTE2: running `mvn integration-test` will download
+jboss-as-distribution, which is huge and takes a while.  Be patient
 
 ## System requirements
 
