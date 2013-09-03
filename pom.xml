@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.jboss.arquillian.examples</groupId>
-    <artifactId>ejb31-jbembedded</artifactId>
+    <artifactId>arquillian-jboss-6.1.0.Final-embedded</artifactId>
     <name>Arquillian Examples EJB3.1 JBoss AS 6 Embedded</name>
     <description>Simple Arquillian EJB3.1 JBoss AS 6 Embedded Project </description>
     <version>1.0.0-SNAPSHOT</version>
@@ -98,6 +98,12 @@
             <artifactId>jboss-ejb-api_3.1_spec</artifactId>
             <version>1.0.1.Final</version>
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>jboss</groupId>
+            <artifactId>jboss-annotations-ejb3</artifactId>
+            <version>4.2.2.GA</version>
         </dependency>
         <!-- Arquillian Test Harness
 
@@ -329,6 +335,9 @@
                             <printSummary>true</printSummary>
 
                             <forkMode>pertest</forkMode>
+                            <!--
+                            <forkMode>never</forkMode>
+                            -->
 
                             <!-- Caution: no linebreak here !-->
                             <argLine>-Xmx512m -XX:MaxPermSize=256m -Djava.net.preferIPv4Stack=true -Djava.util.logging.manager=org.jboss.logmanager.LogManager -Djava.endorsed.dirs=${JBOSS_HOME}/lib/endorsed -Djboss.home=${JBOSS_HOME} -Djboss.boot.server.log.dir=${JBOSS_HOME} -Dorg.jboss.reflect.spi.TypeInfoFactory=org.jboss.reflect.plugins.introspection.IntrospectionTypeInfoFactory</argLine>
