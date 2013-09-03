@@ -1,4 +1,4 @@
 target
 .idea
-ejb31-jbembedded.iml
+*.iml
 transaction.log
